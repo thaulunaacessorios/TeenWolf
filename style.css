@@ -565,3 +565,11 @@ footer span { color: var(--ember); }
   .quiz-main  { padding: 20px 16px; }
   .wrap       { padding: 48px 18px; }
 }
+
+body {
+  cursor: url('cursor-lobo.png'), auto;
+}
+
+a:hover {
+  cursor: url('cursor-lobo-hover.png'), pointer;
+}

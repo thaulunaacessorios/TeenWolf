@@ -578,3 +578,75 @@ body {
   transform: translate(-50%, -50%);
   z-index: 9999;
 }
+/* ══════════════════════════════════════════
+   UPGRADE PREMIUM (ADICIONAR NO FINAL)
+   ══════════════════════════════════════════ */
+
+/* fundo sofisticado */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(200,68,10,.06), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(201,150,58,.04), transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* tipografia refinada */
+.hero-h1 { letter-spacing: -0.05em; }
+.sh { letter-spacing: -0.03em; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* nav mais premium */
+#nav.scrolled {
+  background: rgba(13,12,10,.75);
+  backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* profundidade */
+.card-item,
+.bast-card,
+.char-card,
+.di-entry {
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* hover mais forte */
+.card-item:hover,
+.bast-card:hover,
+.char-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+}
+
+/* botão com micro efeito */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.2), transparent);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+/* cursor refinado */
+.cursor {
+  border: 1px solid var(--ember);
+  border-radius: 50%;
+  transition: transform .1s ease;
+}

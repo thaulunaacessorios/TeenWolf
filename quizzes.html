@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Teen Wolf Fãs — Quizzes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <div class="nav-logo"><span class="w">Teen</span><span>Wolf</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#serie">Série</a>
+      <a href="index.html#personagens">Personagens</a>
+      <a href="index.html#bastidores">Bastidores</a>
+      <a href="quizzes.html" class="active">Quizzes</a>
+      <a href="index.html#diario">Diário</a>
+      <a href="index.html#mapa">Mapa</a>
+      <a href="index.html#curiosidades">Curiosidades</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
+    <div class="nav-end">
+      <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">Light</button>
+    </div>
+  </div>
+</nav>
+<div id="mob-menu">
+  <a href="index.html" onclick="cm()">Home</a>
+  <a href="index.html#serie" onclick="cm()">Série</a>
+  <a href="index.html#personagens" onclick="cm()">Personagens</a>
+  <a href="index.html#bastidores" onclick="cm()">Bastidores</a>
+  <a href="quizzes.html" onclick="cm()">Quizzes</a>
+  <a href="index.html#diario" onclick="cm()">Diário</a>
+  <a href="index.html#mapa" onclick="cm()">Mapa</a>
+  <a href="index.html#curiosidades" onclick="cm()">Curiosidades</a>
+  <a href="index.html#contato" onclick="cm()">Contato</a>
+</div>
+
+<!-- QUIZZES -->
+<section id="quizzes" style="min-height:100vh">
+  <div class="wrap">
+    <div class="eyebrow">Interatividade</div>
+    <h1 class="sh">Quizzes <em>&amp;</em> Desafios</h1>
+    <p class="sl">Seis modalidades diferentes para testar seus conhecimentos — da trivia avançada ao teste de personalidade completo.</p>
+
+    <div class="quiz-shell">
+      <div class="quiz-sidebar">
+        <div class="qs-title">Escolha o quiz</div>
+        <button class="qsb on" onclick="loadQuiz('trivia')" id="btn-trivia">
+          <span class="qsb-info">
+            <span class="qsb-name">Trivia Completo</span>
+            <span class="qsb-sub">20 perguntas</span>
+          </span>
+          <span class="qsb-pill pill-hard">Hard</span>
+        </button>
+        <button class="qsb" onclick="loadQuiz('personagens')" id="btn-personagens">
+          <span class="qsb-info">
+            <span class="qsb-name">Personagens</span>
+            <span class="qsb-sub">12 perguntas</span>
+          </span>
+          <span class="qsb-pill pill-med">Médio</span>
+        </button>
+        <button class="qsb" onclick="loadQuiz('sobrenatural')" id="btn-sobrenatural">
+          <span class="qsb-info">
+            <span class="qsb-name">Sobrenatural</span>
+            <span class="qsb-sub">10 perguntas</span>
+          </span>
+          <span class="qsb-pill pill-med">Médio</span>
+        </button>
+        <button class="qsb" onclick="loadQuiz('bastidores')" id="btn-bastidores">
+          <span class="qsb-info">
+            <span class="qsb-name">Bastidores</span>
+            <span class="qsb-sub">10 perguntas</span>
+          </span>
+          <span class="qsb-pill pill-easy">Fácil</span>
+        </button>
+        <button class="qsb" onclick="loadQuiz('char')" id="btn-char">
+          <span class="qsb-info">
+            <span class="qsb-name">Qual personagem sou?</span>
+            <span class="qsb-sub">Personalidade</span>
+          </span>
+          <span class="qsb-pill pill-fun">Fun</span>
+        </button>
+        <button class="qsb" onclick="loadQuiz('ranking')" id="btn-ranking">
+          <span class="qsb-info">
+            <span class="qsb-name">Placar Geral</span>
+            <span class="qsb-sub">Ranking de fãs</span>
+          </span>
+        </button>
+      </div>
+      <div class="quiz-main" id="quizMain"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Feito com muito amor pela comunidade &nbsp;<span>Teen Wolf Fãs</span>&nbsp; — Site não oficial</p>
+  <p style="margin-top:7px;font-size:.52rem">Todos os direitos de Teen Wolf pertencem à MTV e Paramount Pictures</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

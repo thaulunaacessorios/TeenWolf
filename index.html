@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Teen Wolf Fãs — Beacon Hills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="sp-eyebrow">Bem-vindo a</div>
+  <div class="sp-wolf">TW</div>
+  <div class="sp-title">Beacon Hills</div>
+  <div class="sp-sub">Entre no mundo sobrenatural…</div>
+  <div class="sp-bar"><div class="sp-fill"></div></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <div class="nav-logo"><span class="w">Teen</span><span>Wolf</span></div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#serie">Série</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#bastidores">Bastidores</a>
+      <a href="quizzes.html">Quizzes</a>
+      <a href="#diario">Diário</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="nav-end">
+      <button class="btn-theme" id="themeBtn" onclick="toggleTheme()">Light</button>
+    </div>
+  </div>
+</nav>
+<div id="mob-menu">
+  <a href="#home" onclick="cm()">Home</a>
+  <a href="#serie" onclick="cm()">Série</a>
+  <a href="#personagens" onclick="cm()">Personagens</a>
+  <a href="#bastidores" onclick="cm()">Bastidores</a>
+  <a href="quizzes.html" onclick="cm()">Quizzes</a>
+  <a href="#diario" onclick="cm()">Diário</a>
+  <a href="#mapa" onclick="cm()">Mapa</a>
+  <a href="#curiosidades" onclick="cm()">Curiosidades</a>
+  <a href="#contato" onclick="cm()">Contato</a>
+</div>
+
+<!-- HOME -->
+<section id="home" style="padding-top:0;min-height:100vh">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-gl" id="hgl"></div>
+    <div class="hero-body">
+      <div class="hero-badge">Site Oficial dos Fãs Brasileiros</div>
+      <h1 class="hero-h1">
+        <span class="outline">Teen</span> Wolf
+        <span class="small">O lar dos sobrenaturais</span>
+      </h1>
+      <p class="hero-desc">Mergulhe no universo de Beacon Hills — personagens, quizzes, bastidores e muito mais aguardam por você.</p>
+      <div class="hero-cta">
+        <a href="#serie" class="btn btn-f">Explorar a série</a>
+        <a href="quizzes.html" class="btn btn-o">Fazer os quizzes</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hn">6</div><div class="hl">Temporadas</div></div>
+      <div class="hero-stat"><div class="hn">100</div><div class="hl">Episódios</div></div>
+      <div class="hero-stat"><div class="hn">50+</div><div class="hl">Personagens</div></div>
+      <div class="hero-stat"><div class="hn">2011</div><div class="hl">Estreia MTV</div></div>
+      <div class="hero-stat"><div class="hn">2023</div><div class="hl">O Filme</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SÉRIE -->
+<section id="serie">
+  <div class="wrap">
+    <div class="eyebrow">Universo</div>
+    <h2 class="sh">Sobre a <em>Série</em></h2>
+    <p class="sl">A história de Scott McCall, um adolescente comum que descobre o lado sobrenatural de Beacon Hills após ser mordido por um lobisomem.</p>
+    <div class="cards4" id="aboutCards"></div>
+    <div class="eyebrow" style="margin-top:8px">Cronologia</div>
+    <h3 class="sh" style="font-size:1.7rem">Linha do <em>Tempo</em></h3>
+    <div class="tl" id="timeline"></div>
+  </div>
+</section>
+
+<!-- PERSONAGENS -->
+<section id="personagens">
+  <div class="wrap">
+    <div class="eyebrow">Elenco</div>
+    <h2 class="sh">Os <em>Personagens</em></h2>
+    <p class="sl">Clique em qualquer personagem para expandir seu perfil completo.</p>
+    <div class="char-grid" id="charGrid"></div>
+  </div>
+</section>
+
+<!-- BASTIDORES -->
+<section id="bastidores">
+  <div class="wrap">
+    <div class="eyebrow">Behind the Scenes</div>
+    <h2 class="sh">Bastidores <em>&amp;</em> Atores</h2>
+    <p class="sl">Curiosidades, entrevistas e segredos das gravações que poucos fãs conhecem.</p>
+    <div class="bast-grid" id="bastGrid"></div>
+  </div>
+</section>
+
+<!-- DIÁRIO -->
+<section id="diario">
+  <div class="wrap">
+    <div class="eyebrow">Registros Secretos</div>
+    <h2 class="sh">Diário de <em>Beacon Hills</em></h2>
+    <p class="sl">Anotações e relatos encontrados nos arquivos confidenciais da cidade.</p>
+    <div class="diary-feed" id="diaryFeed"></div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section id="mapa">
+  <div class="wrap">
+    <div class="eyebrow">Cartografia</div>
+    <h2 class="sh">Mapa de <em>Beacon Hills</em></h2>
+    <p class="sl">Clique nos pontos para descobrir curiosidades de cada local da série.</p>
+    <div class="map-wrap">
+      <div class="map-area" id="mapArea">
+        <div id="mapPins"></div>
+        <div class="map-popup" id="mapPopup">
+          <button class="mp-close" onclick="closePopup()">&#10005;</button>
+          <div class="mp-title" id="popTitle"></div>
+          <div class="mp-body" id="popBody"></div>
+        </div>
+      </div>
+      <div class="map-legend">
+        <div class="leg-item"><div class="leg-dot" style="background:var(--ember)"></div>Principais</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--wolf2)"></div>Sobrenatural</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#5ecfa8"></div>Refúgio</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--gold2)"></div>Místico</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#8ab0d8"></div>Autoridade</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURIOSIDADES -->
+<section id="curiosidades">
+  <div class="wrap">
+    <div class="eyebrow">Fun Facts</div>
+    <h2 class="sh">Curiosidades <em>&amp;</em> Easter Eggs</h2>
+    <p class="sl">Detalhes que os criadores esconderam e que poucos fãs perceberam.</p>
+    <div class="fact-hero">
+      <div class="fact-label">Você Sabia?</div>
+      <div class="fact-num" id="factNum">Fato 1 / 12</div>
+      <div class="fact-text" id="factText">Carregando…</div>
+      <div class="fact-nav">
+        <button class="btn btn-o" style="padding:10px 20px" onclick="prevFact()">Anterior</button>
+        <button class="btn btn-f" style="padding:10px 20px" onclick="nextFact()">Próxima</button>
+      </div>
+    </div>
+    <div class="cards4" id="eggGrid"></div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+
+  <!-- Redes oficiais -->
+  <div class="c-lbl" style="margin-bottom:12px">Redes sociais</div>
+  <div class="c-social">
+
+    <a href="https://instagram.com/mtvteenwolf" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Instagram</div>
+        <div class="sh2">@mtvteenwolf</div>
+      </div>
+    </a>
+
+    <a href="https://www.tiktok.com/@mtvteenwolf" target="_blank" class="social-link">
+      <span class="si">🎵</span>
+      <div>
+        <div class="sn">TikTok</div>
+        <div class="sh2">@mtvteenwolf</div>
+      </div>
+    </a>
+
+    <a href="https://x.com/MTVteenwolf" target="_blank" class="social-link">
+      <span class="si">🐦</span>
+      <div>
+        <div class="sn">Twitter (X)</div>
+        <div class="sh2">@MTVteenwolf</div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/@MTV" target="_blank" class="social-link">
+      <span class="si">▶️</span>
+      <div>
+        <div class="sn">YouTube</div>
+        <div class="sh2">MTV</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Elenco -->
+  <div class="c-lbl" style="margin:20px 0 12px;">Elenco no Instagram</div>
+  <div class="c-social">
+
+    <a href="https://instagram.com/tylerposey58" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Tyler Posey</div>
+        <div class="sh2">@tylerposey58</div>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/hollandroden" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Holland Roden</div>
+        <div class="sh2">@hollandroden</div>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/crystalmreed" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Crystal Reed</div>
+        <div class="sh2">@crystalmreed</div>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/shelleyhennig" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Shelley Hennig</div>
+        <div class="sh2">@shelleyhennig</div>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/tylerhoechlin" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Tyler Hoechlin</div>
+        <div class="sh2">@tylerhoechlin</div>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/dylansprayberry" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Dylan Sprayberry</div>
+        <div class="sh2">@dylansprayberry</div>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/arden_cho" target="_blank" class="social-link">
+      <span class="si">📸</span>
+      <div>
+        <div class="sn">Arden Cho</div>
+        <div class="sh2">@arden_cho</div>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>Feito com muito amor pela comunidade &nbsp;<span>Teen Wolf Fãs</span>&nbsp; — Site não oficial</p>
+  <p style="margin-top:7px;font-size:.52rem">Todos os direitos de Teen Wolf pertencem à MTV e Paramount Pictures</p>
+</footer>
+
+<!-- SPLASH HIDE -->
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('splash').classList.add('hide');
+    }, 2800);
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
